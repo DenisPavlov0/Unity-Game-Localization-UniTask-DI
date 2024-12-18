@@ -150,4 +150,9 @@ public class PlayerLocomotionManager : MonoBehaviour
         // Проверяем, есть ли земля в радиусе вокруг игрока
         _playerManager.isGrounded = Physics.CheckSphere(transform.position, groundCheckSphereRadius, groundLayer);
     }
+    
+    public bool IsPlayerFalling()
+    {
+        return !_playerManager.isGrounded;
+    }
 }
